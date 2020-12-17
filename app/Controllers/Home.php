@@ -7,8 +7,11 @@ use CodeIgniter\Controller;
 class Home extends BaseController
 {
 	public function index()
-	{
-		return view('welcome_message');
+	{	
+		$data = array(
+	      	'content' => 'welcome_message',
+	      );
+	    return view('layout',$data);
 	}
 
 	public function test()
@@ -16,7 +19,6 @@ class Home extends BaseController
 		$session = \Config\Services::session();
 	      $message = $session->getFlashdata('message');
 	      $std = new Users();
-	      $std = $std->builder();
 	      $students = $std->findAll();
 
 	      $pager = \Config\Services::pager();
@@ -25,9 +27,25 @@ class Home extends BaseController
 	      $data = array(
 	      	'students' => $students,
 	      	'message' => $message,
+	      	'content' => 'index',
 	      );
-	      return view('jancok',$data);
+	      return view('layout',$data);
 
+	}
+
+	public function add(){
+		$data = array(
+	      	'content' => 'add',
+	      );
+	    return view('layout',$data);
+	}
+
+	public function add_action(){
+		$name   = $this->request->getPost('name');
+        $password   = $this->request->getPost('password');
+
+        echo $name;
+        echo md5($password);
 	}
 
 	//--------------------------------------------------------------------

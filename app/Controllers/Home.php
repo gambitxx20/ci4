@@ -28,7 +28,7 @@ class Home extends BaseController
 	      /*echo view('jancok',$data);*/
 
 	      print_r($data['students'][0]['id']);
-	      echo base_url('css');
+	      echo base_url('');
 	}
 
 	//--------------------------------------------------------------------

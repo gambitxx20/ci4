@@ -1,8 +1,8 @@
-<form action="<?php echo base_url('home/add_action')?>" method="POST">	
+<form action="<?php echo base_url('home/edit_action/'.$user->id)?>" method="POST">	
 	<table>
 		<tr>
 			<td>Name</td>
-			<td><input type="text" name="name" required></td>
+			<td><input type="text" name="name"  value="<?php echo $user->name?>" required></td>
 		</tr>
 		<tr>
 			<td>Password</td>

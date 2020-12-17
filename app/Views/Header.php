@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Testing Jancok</title>
+	<title><?php echo $title ?></title>
 </head>
 
 <body>

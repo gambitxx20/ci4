@@ -5,7 +5,7 @@ class Users extends Model
    protected $DBGroup = 'default';
    protected $table = 'users';
    protected $primaryKey = 'id';
-   protected $returnType = 'array';
+   protected $returnType = 'object';
    protected $useTimestamps = true;
    protected $allowedFields = ['name','password'];
    protected $createdField = 'u_date';

@@ -16,6 +16,7 @@ class Home extends BaseController
 		$session = \Config\Services::session();
 	      $message = $session->getFlashdata('message');
 	      $std = new Users();
+	      $std = $std->builder();
 	      $students = $std->findAll();
 
 	      $pager = \Config\Services::pager();
@@ -25,10 +26,8 @@ class Home extends BaseController
 	      	'students' => $students,
 	      	'message' => $message,
 	      );
-	      /*echo view('jancok',$data);*/
+	      return view('jancok',$data);
 
-	      print_r($data['students'][0]['id']);
-	      echo base_url('');
 	}
 
 	//--------------------------------------------------------------------

@@ -68,4 +68,6 @@
 	</tr>
 </table>
 <p>Required Format for RESTful API is JSON. use raw with name and password field for create and update</p>
+<p>This is Example for using POSTman</p>
+<img src="<?php echo base_url('public/img/Example.png')?>">
 	

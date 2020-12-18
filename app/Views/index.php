@@ -1,5 +1,6 @@
-<a href="<?php echo base_url('home/add')?>" style="margin-bottom : 20px;margin-left: 20px;margin-top: 20px">Add User</a>
-<table style="width: 50%;text-align: center;margin-top: 40px" border="1">
+<h3>CI 4 CRUD & RESTFUL Example</h3>
+<a href="<?php echo base_url('home/add')?>" style="margin-bottom : 20px;">Add User</a>
+<table style="width: 50%;text-align: center;margin-top: 20px" border="1">
 	<tr>
 		<th colspan="6" style="padding: 10px">Users List From Database (Native & RESTful)</th>
 	</tr>
@@ -33,7 +34,7 @@
 <br>
 <table style="width: 50%" border="1">
 	<tr>
-		<th colspan="5" style="padding: 10px">Try for Restful API (Use Postman or etc.)</th>
+		<th colspan="5" style="padding: 10px">Try for RESTful API (Use Postman or etc.)</th>
 	</tr>
 	<tr>
 		<th>Method</th>
@@ -66,4 +67,5 @@
 		<td>Delete an User</td>
 	</tr>
 </table>
+<p>Required Format for RESTful API is JSON. use raw with name and password field for create and update</p>
 	

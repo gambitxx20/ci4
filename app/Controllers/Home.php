@@ -1,6 +1,6 @@
 <?php namespace App\Controllers;
 
-use App\Models\Users;
+use App\Models\UsersModel;
 use CodeIgniter\Config\Config;
 use CodeIgniter\Controller;
 
@@ -8,17 +8,10 @@ class Home extends BaseController
 {
 	public function index()
 	{	
-		$data = array(
-	      	'content' => 'welcome_message',
-	      );
-	    return view('layout',$data);
-	}
 
-	public function test()
-	{
 		$session = \Config\Services::session();
 	      $message = $session->getFlashdata('message');
-	      $std = new Users();
+	      $std = new UsersModel();
 	      $users = $std->findAll();
 
 	      $pager = \Config\Services::pager();
@@ -43,7 +36,7 @@ class Home extends BaseController
 	}
 
 	public function add_action(){
-		$user = new Users();
+		$user = new UsersModel();
 
 		$name   = $this->request->getPost('name');
         $password   = $this->request->getPost('password');
@@ -54,14 +47,14 @@ class Home extends BaseController
         		'password' => md5($password),
         	);
         	$save = $user->insert($data);
-        	return redirect()->to(base_url('home/test')); 
+        	return redirect()->to(base_url('home')); 
         }else{
         	echo 'Password Tidak Cocok';
         }
 	}
 
 	public function edit($id){
-		$user = new Users();
+		$user = new UsersModel();
 		$user = $user->where('id', $id)->first();
 		$data = array(
 	      	'title' => 'Testing edit',
@@ -72,7 +65,7 @@ class Home extends BaseController
 	}
 
 	public function edit_action($id){
-		$user = new Users();
+		$user = new UsersModel();
 
 		$name   = $this->request->getPost('name');
         $password   = $this->request->getPost('password');
@@ -83,16 +76,16 @@ class Home extends BaseController
         		'password' => md5($password),
         	);
         	$update = $user->update($id,$data);
-        	return redirect()->to(base_url('home/test')); 
+        	return redirect()->to(base_url('home')); 
         }else{
         	echo 'Password Tidak Cocok';
         }
 	}
 
 	public function delete($id){
-		$user = new Users();
+		$user = new UsersModel();
 		$delete = $user->where('id', $id)->delete();
-	    return redirect()->to(base_url('home/test')); 
+	    return redirect()->to(base_url('home')); 
 	}
 
 	//--------------------------------------------------------------------

@@ -1,5 +1,8 @@
-<a href="<?php echo base_url('home/add')?>">Add User</a>
-<table style="width: 100%;text-align: center;">
+<a href="<?php echo base_url('home/add')?>" style="margin-bottom : 20px;margin-left: 20px;margin-top: 20px">Add User</a>
+<table style="width: 50%;text-align: center;margin-top: 40px" border="1">
+	<tr>
+		<th colspan="6" style="padding: 10px">Users List From Database (Native & RESTful)</th>
+	</tr>
 	<tr>
 		<th>No</th>
 		<th>Nama</th>
@@ -26,5 +29,41 @@
 	<?php		
 		}
 	?>
+</table>
+<br>
+<table style="width: 50%" border="1">
+	<tr>
+		<th colspan="5" style="padding: 10px">Try for Restful API (Use Postman or etc.)</th>
+	</tr>
+	<tr>
+		<th>Method</th>
+		<th>End Point</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/api/users</td>
+		<td>List Of All Users</td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/api/users/(:num)</td>
+		<td>Show a User by ID</td>
+	</tr>
+	<tr>
+		<td>POST</td>
+		<td>/api/users</td>
+		<td>Create New User</td>
+	</tr>
+	<tr>
+		<td>PUT</td>
+		<td>/api/users/(:num)</td>
+		<td>Update an User</td>
+	</tr>
+	<tr>
+		<td>DELETE</td>
+		<td>/api/users/(:num)</td>
+		<td>Delete an User</td>
+	</tr>
 </table>
 	

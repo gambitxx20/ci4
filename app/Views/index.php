@@ -1,6 +1,8 @@
-<h3>CI 4 CRUD & RESTFUL Example</h3>
-<a href="<?php echo base_url('home/add')?>" style="margin-bottom : 20px;">Add User</a>
-<table style="width: 50%;text-align: center;margin-top: 20px;margin-bottom: 50px" border="1">
+<div style="width: 70%;margin-right: auto;margin-left: auto;">
+	<h3>CI 4 CRUD & RESTFUL Example</h3>
+	<a href="<?php echo base_url('home/add')?>" style="margin-bottom : 20px;">Add User</a>
+</div>
+<table style="width: 70%;text-align: center;margin-top: 20px;margin-bottom: 50px;margin-right: auto;margin-left: auto;" border="1">
 	<tr>
 		<th colspan="6" style="padding: 10px">Users List From Database (Native & RESTful)</th>
 	</tr>
@@ -32,7 +34,7 @@
 	?>
 </table>
 <br>
-<table style="width: 50%" border="1">
+<table style="width: 70%;margin-right: auto;margin-left: auto;" border="1">
 	<tr>
 		<th colspan="5" style="padding: 10px">Try for RESTful API (Use Postman or etc.)</th>
 	</tr>
@@ -67,7 +69,9 @@
 		<td>Delete an User</td>
 	</tr>
 </table>
-<p>Required Format for RESTful API is JSON. use raw with name and password field for create and update</p>
-<p>This is Example for using POSTman</p>
-<img src="<?php echo base_url('public/img/Example.png')?>" style="width: 50%">
+<div style="width: 70%;margin-right: auto;margin-left: auto;">
+	<p style="margin-right: auto;margin-left: auto;">Required Format for RESTful API is JSON. use raw with name and password field for create and update</p>
+	<p>This is Example for using POSTman</p>
+	<img src="<?php echo base_url('public/img/Example.png')?>" style="width: 100%">
+</div>
 	

@@ -25,7 +25,7 @@ class Users extends ResourceController
         $model = new UsersModel();
         $data = $model->getWhere(['id' => $id])->getResult();
         if($data){
-            return $this->respond($data);
+            return $this->respond($data[0]);
         }else{
             return $this->failNotFound('No Data Found with id '.$id);
         }
